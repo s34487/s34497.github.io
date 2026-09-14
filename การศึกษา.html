@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Portfolio ✨ - ประวัติการศึกษา</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-pink-200 selection:text-pink-800">
+
+    <!-- Top Header Navigation -->
+    <header class="sticky top-3 z-50 px-3 md:px-4 max-w-5xl mx-auto w-full">
+        <nav class="bg-white/90 backdrop-blur-md p-2 rounded-full shadow-lg border border-pink-100 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
+            <a href="index.html" class="flex items-center gap-2 pl-3 group shrink-0">
+                <span class="text-2xl group-hover:rotate-12 transition-transform duration-300">🎀</span>
+                <span class="heading-font text-lg md:text-xl font-bold bg-gradient-to-r from-pink-400 to-orange-300 bg-clip-text text-transparent">
+                    MyPortfolio
+                </span>
+            </a>
+
+            <div class="flex items-center gap-1 text-xs md:text-sm overflow-x-auto no-scrollbar py-1">
+                <a href="index.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-house"></i> <span>หน้าหลัก</span>
+                </a>
+                <a href="profile.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-user"></i> <span>ประวัติ</span>
+                </a>
+                <a href="education.html" class="nav-pill active px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-graduation-cap"></i> <span>การศึกษา</span>
+                </a>
+                <a href="activities.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-icons"></i> <span>กิจกรรม</span>
+                </a>
+                <a href="goals.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-bullseye"></i> <span>เป้าหมาย</span>
+                </a>
+                <a href="contact.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-paper-plane"></i> <span>ติดต่อ</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="text-center mb-8">
+            <h2 class="heading-font text-3xl font-bold text-gray-800 mb-2">🎓 ประวัติการศึกษา</h2>
+            <p class="text-gray-500">เส้นทางการเรียนรู้ตั้งแต่อดีตจนถึงปัจจุบัน</p>
+        </div>
+
+        <div class="cute-card p-6 md:p-8 border border-pink-100">
+            <div class="relative border-l-2 border-pink-200 ml-4 md:ml-6 space-y-8">
+                <!-- Timeline 1: University -->
+                <div class="relative pl-6 md:pl-8">
+                    <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-pink-300 text-white flex items-center justify-center text-sm shadow">
+                        🎓
+                    </span>
+                    <span class="inline-block bg-pink-100 text-pink-600 text-xs px-2.5 py-0.5 rounded-full font-bold mb-1">
+                        ปี พ.ศ. 2564 - 2568
+                    </span>
+                    <h3 class="heading-font text-lg font-bold text-gray-800">ระดับอุดมศึกษา (ปริญญาตรี)</h3>
+                    <p class="text-sm font-semibold text-pink-500">มหาวิทยาลัยชื่อดัง / สาขาวิชาของคุณ</p>
+                    <p class="text-xs text-gray-500 mb-2">เกรดเฉลี่ยสะสม (GPAX): 3.50 (เกียรตินิยม)</p>
+                    <p class="text-sm text-gray-600 leading-relaxed bg-pink-50/50 p-3 rounded-xl border border-pink-100">
+                        เน้นศึกษาทฤษฎีและการปฏิบัติในสาขาวิชา ทำโครงงานจบการศึกษา (Senior Project) เรื่อง การพัฒนาเว็บแอปพลิเคชันสำหรับชุมชน
+                    </p>
+                </div>
+
+                <!-- Timeline 2: High School -->
+                <div class="relative pl-6 md:pl-8">
+                    <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-amber-300 text-white flex items-center justify-center text-sm shadow">
+                        🏫
+                    </span>
+                    <span class="inline-block bg-amber-100 text-amber-700 text-xs px-2.5 py-0.5 rounded-full font-bold mb-1">
+                        ปี พ.ศ. 2561 - 2564
+                    </span>
+                    <h3 class="heading-font text-lg font-bold text-gray-800">ระดับมัธยมศึกษาตอนปลาย</h3>
+                    <p class="text-sm font-semibold text-amber-600">โรงเรียนของคุณ (แผนการเรียน วิทย์-คณิต / ศิลป์-คำนวณ)</p>
+                    <p class="text-xs text-gray-500 mb-2">เกรดเฉลี่ยสะสม (GPAX): 3.80</p>
+                    <p class="text-sm text-gray-600 leading-relaxed bg-amber-50/50 p-3 rounded-xl border border-amber-100">
+                        เข้าร่วมกิจกรรมของโรงเรียน เป็นตัวแทนแข่งขันตอบปัญหาทางวิชาการ และได้รับรางวัลเรียนดี
+                    </p>
+                </div>
+
+                <!-- Timeline 3: Junior High School -->
+                <div class="relative pl-6 md:pl-8">
+                    <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-teal-300 text-white flex items-center justify-center text-sm shadow">
+                        ✏️
+                    </span>
+                    <span class="inline-block bg-teal-100 text-teal-700 text-xs px-2.5 py-0.5 rounded-full font-bold mb-1">
+                        ปี พ.ศ. 2558 - 2561
+                    </span>
+                    <h3 class="heading-font text-lg font-bold text-gray-800">ระดับมัธยมศึกษาตอนต้น</h3>
+                    <p class="text-sm font-semibold text-teal-600">โรงเรียนของคุณ</p>
+                    <p class="text-sm text-gray-600 leading-relaxed bg-teal-50/50 p-3 rounded-xl border border-teal-100">
+                        ศึกษาความรู้พื้นฐานทั่วไป เข้าร่วมชมรมดนตรีและสโมสรนักเรียน
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-gray-400">
+        <p>Made with 💖 • Created for GitHub Pages Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
