@@ -1,660 +1,353 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>My Portfolio ♡</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Prompt", sans-serif;
-      background: #fff8fb;
-      color: #5d5360;
-      overflow-x: hidden;
-    }
-
-    /* =========================
-       NAVBAR
-    ========================= */
-
-    nav {
-      width: 100%;
-      height: 75px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 0 8%;
-
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(10px);
-
-      position: fixed;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-family: "Itim", cursive;
-      font-size: 30px;
-      color: #df7fa1;
-      text-decoration: none;
-    }
-
-    .menu {
-      display: flex;
-      gap: 25px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: #655b63;
-      font-size: 15px;
-      transition: 0.3s;
-    }
-
-    .menu a:hover {
-      color: #df7fa1;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 100vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 120px 10% 70px;
-
-      position: relative;
-
-      background:
-        radial-gradient(circle at 10% 20%, #ffddea 0 7%, transparent 8%),
-        radial-gradient(circle at 90% 80%, #e9dcff 0 8%, transparent 9%),
-        #fff8fb;
-    }
-
-
-    /* ข้อความ */
-
-    .hero-text {
-      width: 55%;
-      z-index: 2;
-    }
-
-    .small-text {
-      color: #df7fa1;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .hero h1 {
-      font-family: "Itim", cursive;
-      font-size: 75px;
-      line-height: 1.1;
-      color: #65556b;
-    }
-
-    .hero h1 span {
-      color: #df7fa1;
-    }
-
-    .hero h2 {
-      font-family: "Itim", cursive;
-      font-size: 35px;
-      color: #a18ab5;
-      margin: 10px 0 20px;
-    }
-
-    .description {
-      max-width: 570px;
-      font-size: 17px;
-      line-height: 1.9;
-      color: #766b74;
-    }
-
-
-    /* =========================
-       BUTTON
-    ========================= */
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-
-      padding: 12px 27px;
-
-      border-radius: 30px;
-
-      text-decoration: none;
-
-      background: #df7fa1;
-      color: white;
-
-      box-shadow: 0 10px 25px rgba(223,127,161,0.25);
-
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: translateY(-5px);
-    }
-
-    .btn2 {
-      background: white;
-      color: #df7fa1;
-      border: 2px solid #f2c4d4;
-      box-shadow: none;
-    }
-
-
-    /* =========================
-       PROFILE
-    ========================= */
-
-    .profile {
-      width: 350px;
-      height: 430px;
-
-      background: #f8d9e5;
-
-      border-radius: 48% 48% 45% 45%;
-
-      padding: 12px;
-
-      transform: rotate(4deg);
-
-      box-shadow: 0 25px 60px rgba(180,120,150,0.18);
-
-      position: relative;
-
-      z-index: 2;
-    }
-
-    .profile img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      border-radius: inherit;
-    }
-
-
-    /* ของตกแต่ง */
-
-    .heart {
-      position: absolute;
-
-      font-size: 55px;
-
-      color: #df7fa1;
-
-      animation: float 3s ease-in-out infinite;
-    }
-
-    .heart1 {
-      top: -35px;
-      left: -35px;
-    }
-
-    .heart2 {
-      bottom: -35px;
-      right: -35px;
-    }
-
-    .star {
-      position: absolute;
-
-      font-size: 35px;
-
-      color: #b69bd2;
-
-      animation: float 2.5s ease-in-out infinite;
-    }
-
-    .star1 {
-      top: 30px;
-      right: -50px;
-    }
-
-    .star2 {
-      bottom: 50px;
-      left: -55px;
-    }
-
-
-    /* =========================
-       DECORATION
-    ========================= */
-
-    .bubble {
-      position: absolute;
-
-      width: 100px;
-      height: 100px;
-
-      border-radius: 50%;
-
-      background: #f5dceb;
-
-      opacity: 0.5;
-
-      animation: float 5s ease-in-out infinite;
-    }
-
-    .bubble1 {
-      top: 18%;
-      right: 5%;
-    }
-
-    .bubble2 {
-      bottom: 10%;
-      left: 4%;
-
-      width: 70px;
-      height: 70px;
-
-      background: #ded2f5;
-    }
-
-
-    /* =========================
-       ABOUT PREVIEW
-    ========================= */
-
-    .about {
-      padding: 80px 10%;
-
-      text-align: center;
-
-      background: #fff;
-    }
-
-    .about-title {
-      font-family: "Itim", cursive;
-      font-size: 45px;
-      color: #8d759a;
-    }
-
-    .about-title span {
-      color: #df7fa1;
-    }
-
-    .about p {
-      max-width: 650px;
-      margin: 15px auto 40px;
-
-      line-height: 1.8;
-    }
-
-
-    .cards {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 25px;
-
-      max-width: 1000px;
-
-      margin: auto;
-    }
-
-    .card {
-      padding: 30px 20px;
-
-      border-radius: 25px;
-
-      background: #fff8fb;
-
-      border: 1px solid #f7dce6;
-
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-
-      box-shadow: 0 15px 30px rgba(180,120,150,0.12);
-    }
-
-    .card-icon {
-      font-size: 45px;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      font-family: "Itim", cursive;
-      font-size: 27px;
-      color: #df7fa1;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      text-align: center;
-
-      padding: 25px;
-
-      background: #fff0f6;
-
-      color: #9b7b88;
-    }
-
-
-    /* =========================
-       ANIMATION
-    ========================= */
-
-    @keyframes float {
-
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-15px);
-      }
-
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 800px) {
-
-      nav {
-        padding: 0 5%;
-      }
-
-      .menu {
-        gap: 10px;
-      }
-
-      .menu a {
-        font-size: 12px;
-      }
-
-      .hero {
-        flex-direction: column-reverse;
-
-        text-align: center;
-
-        padding: 120px 25px 70px;
-
-        gap: 50px;
-      }
-
-      .hero-text {
-        width: 100%;
-      }
-
-      .hero h1 {
-        font-size: 55px;
-      }
-
-      .hero h2 {
-        font-size: 28px;
-      }
-
-      .buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .profile {
-        width: 270px;
-        height: 340px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Portfolio ✨</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Kanit & Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Kanit', 'Fredoka', sans-serif;
+            background-color: #FAF4F0;
+            color: #4A4A4A;
+        }
+
+        .heading-font {
+            font-family: 'Fredoka', 'Kanit', sans-serif;
+        }
+
+        /* Custom Soft Shadow & Border Radius */
+        .cute-card {
+            background: #FFFFFF;
+            border-radius: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(255, 182, 193, 0.3), 0 8px 10px -6px rgba(255, 182, 193, 0.15);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .cute-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 28px -8px rgba(255, 154, 162, 0.35);
+        }
+
+        /* Custom Cute Buttons */
+        .btn-cute {
+            background: linear-gradient(135deg, #FFB7B2 0%, #FFDAC1 100%);
+            border-radius: 999px;
+            box-shadow: 0 4px 15px rgba(255, 183, 178, 0.4);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-cute:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px rgba(255, 183, 178, 0.6);
+        }
+
+        .btn-cute:active {
+            transform: scale(0.96);
+        }
+
+        /* Nav Pills Active State */
+        .nav-pill {
+            transition: all 0.3s ease;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .nav-pill.active {
+            background-color: #FFB7B2;
+            color: #FFFFFF;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(255, 183, 178, 0.5);
+        }
+
+        /* Page Transition Animations */
+        .page-content {
+            display: none;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        .page-content.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating Animation for Avatar Graphics */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Hide scrollbars for navbar on small screens */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF4F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFB7B2;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-
-
-<body>
-
-
-  <!-- =========================
-       NAVBAR
-  ========================= -->
-
-  <nav>
-
-    <a href="index.html" class="logo">
-      ♡ My Portfolio
-    </a>
-
-    <div class="menu">
-
-      <a href="index.html">🏠 Home</a>
-
-      <a href="about.html">🌷 About</a>
-
-      <a href="education.html">🎓 Education</a>
-
-      <a href="skills.html">✨ Skills</a>
-
-      <a href="projects.html">💻 Projects</a>
-
-      <a href="activities.html">🌈 Activities</a>
-
-      <a href="certificates.html">🏆 Certificates</a>
-
-    </div>
-
-  </nav>
-
-
-  <!-- =========================
-       HERO
-  ========================= -->
-
-  <section class="hero">
-
-
-    <div class="bubble bubble1"></div>
-
-    <div class="bubble bubble2"></div>
-
-
-    <div class="hero-text">
-
-      <p class="small-text">
-        ✿ Welcome to my portfolio ✿
-      </p>
-
-      <h1>
-        Hello, I'm
-        <span>YOUR NAME</span> ♡
-      </h1>
-
-      <h2>
-        Student • Creator • Dreamer 🌷
-      </h2>
-
-      <p class="description">
-        สวัสดีค่ะ! ยินดีต้อนรับเข้าสู่ Portfolio
-        ของฉัน เว็บไซต์เล็ก ๆ ที่รวบรวมประวัติ
-        การศึกษา ทักษะ ผลงาน กิจกรรม
-        และเรื่องราวต่าง ๆ ของฉันเอาไว้ 💗
-      </p>
-
-
-      <div class="buttons">
-
-        <a href="about.html" class="btn">
-          🌸 About Me
-        </a>
-
-        <a href="projects.html" class="btn btn2">
-          💻 My Projects
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- รูปโปรไฟล์ -->
-
-    <div class="profile">
-
-      <!-- เปลี่ยนรูปตรงนี้ -->
-      <img src="images/profile.jpg" alt="My Profile">
-
-      <div class="heart heart1">
-        ♡
-      </div>
-
-      <div class="heart heart2">
-        ♡
-      </div>
-
-      <div class="star star1">
-        ✦
-      </div>
-
-      <div class="star star2">
-        ✧
-      </div>
-
-    </div>
-
-
-  </section>
-
-
-  <!-- =========================
-       ABOUT PREVIEW
-  ========================= -->
-
-  <section class="about">
-
-    <p class="small-text">
-      ♡ A LITTLE ABOUT ME ♡
-    </p>
-
-    <h2 class="about-title">
-      My Little <span>World</span> 🌷
-    </h2>
-
-    <p>
-      พื้นที่เล็ก ๆ ที่รวบรวมสิ่งที่ฉันชอบ
-      สิ่งที่ฉันเรียนรู้ และผลงานที่ฉันภูมิใจ
-    </p>
-
-
-    <div class="cards">
-
-
-      <div class="card">
-
-        <div class="card-icon">
-          🎓
-        </div>
-
-        <h3>
-          Education
-        </h3>
-
-        <p>
-          ประวัติการศึกษา
-          และเส้นทางการเรียนรู้ของฉัน
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-icon">
-          💻
-        </div>
-
-        <h3>
-          Projects
-        </h3>
-
-        <p>
-          ผลงานและโครงงาน
-          ที่ฉันตั้งใจสร้างขึ้น
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-icon">
-          🏆
-        </div>
-
-        <h3>
-          Certificates
-        </h3>
-
-        <p>
-          เกียรติบัตรและ
-          ความสำเร็จต่าง ๆ
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-    <p>
-      Made with ♡ by YOUR NAME
-    </p>
-
-  </footer>
-
-
-</body>
-</html>
+<body class="min-h-screen flex flex-col justify-between selection:bg-pink-200 selection:text-pink-800">
+
+    <!-- Top Header & Floating Navbar -->
+    <header class="sticky top-3 z-50 px-3 md:px-4 max-w-5xl mx-auto w-full">
+        <nav class="bg-white/90 backdrop-blur-md p-2 rounded-full shadow-lg border border-pink-100 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
+            <!-- Brand / Logo -->
+            <a href="#" onclick="switchTab('home')" class="flex items-center gap-2 pl-3 group shrink-0">
+                <span class="text-2xl group-hover:rotate-12 transition-transform duration-300">🎀</span>
+                <span class="heading-font text-lg md:text-xl font-bold bg-gradient-to-r from-pink-400 to-orange-300 bg-clip-text text-transparent">
+                    MyPortfolio
+                </span>
+            </a>
+
+            <!-- Navigation Links (6 Sections) -->
+            <div class="flex items-center gap-1 text-xs md:text-sm overflow-x-auto no-scrollbar py-1">
+                <button onclick="switchTab('home')" id="nav-home" class="nav-pill active px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-house"></i> <span>หน้าหลัก</span>
+                </button>
+                <button onclick="switchTab('profile')" id="nav-profile" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-user"></i> <span>ประวัติ</span>
+                </button>
+                <button onclick="switchTab('education')" id="nav-education" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-graduation-cap"></i> <span>การศึกษา</span>
+                </button>
+                <button onclick="switchTab('activities')" id="nav-activities" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-icons"></i> <span>กิจกรรม</span>
+                </button>
+                <button onclick="switchTab('goals')" id="nav-goals" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-bullseye"></i> <span>เป้าหมาย</span>
+                </button>
+                <button onclick="switchTab('contact')" id="nav-contact" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-paper-plane"></i> <span>ติดต่อ</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
+
+        <!-- SECTION 1: HOME (หน้าหลัก) -->
+        <section id="page-home" class="page-content active">
+            <div class="cute-card p-6 md:p-12 mb-8 border border-pink-100 text-center md:text-left relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-pink-100 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                    <!-- Profile Avatar -->
+                    <div class="relative group shrink-0">
+                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl bg-pink-100 flex items-center justify-center text-7xl floating-element">
+                            <img src="https://placehold.co/200x200/FFD1DC/6B4C4C?text=✨+Me+✨" alt="My Photo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/200x200/FFD1DC/6B4C4C?text=Avatar';">
+                        </div>
+                        <span class="absolute bottom-2 right-2 bg-white text-2xl p-2 rounded-full shadow-md">🌸</span>
+                    </div>
+
+                    <!-- Intro Hero Text -->
+                    <div class="flex-1">
+                        <span class="inline-block bg-pink-100 text-pink-600 px-4 py-1.5 rounded-full text-sm font-medium mb-3">
+                            👋 ยินดีต้อนรับสู่พอร์ตฟอลิโอของฉัน!
+                        </span>
+                        <h1 class="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+                            สวัสดีครับ/ค่ะ ฉันชื่อ <span class="text-pink-400">"ใส่ชื่อ-นามสกุล"</span> 
+                        </h1>
+                        <p class="text-lg text-pink-500 font-medium mb-4">
+                            "คำคมสั้นๆ หรือคติประจำใจของคุณ ✨"
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            ยินดีต้อนรับทุกคนเข้าสู่พื้นที่สรุปประวัติ ผลงาน การศึกษา และกิจกรรมต่างๆ ของฉัน เว็บไซต์นี้จัดทำขึ้นเพื่อนำเสนอตัวตนและทักษะความสามารถในสไตล์ที่เรียบง่ายและน่ารักครับ
+                        </p>
+
+                        <!-- Quick Action Buttons -->
+                        <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                            <button onclick="switchTab('profile')" class="btn-cute text-white px-6 py-2.5 font-medium flex items-center gap-2">
+                                <i class="fa-solid fa-user"></i> รู้จักฉันมากขึ้น
+                            </button>
+                            <button onclick="switchTab('contact')" class="bg-white border-2 border-pink-200 text-pink-500 hover:bg-pink-50 px-6 py-2.5 rounded-full font-medium transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-envelope"></i> ติดต่อฉัน
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Highlight Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-amber-50/80 p-5 rounded-3xl border border-amber-100 text-center hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-2">🎓</div>
+                    <h3 class="font-bold text-gray-800">การศึกษา</h3>
+                    <p class="text-xs text-gray-600 mt-1">มุ่งมั่นตั้งใจเรียนรู้ พัฒนาตนเองอยู่เสมอ</p>
+                </div>
+                <div class="bg-purple-50/80 p-5 rounded-3xl border border-purple-100 text-center hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-2">🎈</div>
+                    <h3 class="font-bold text-gray-800">กิจกรรม</h3>
+                    <p class="text-xs text-gray-600 mt-1">ชอบทำกิจกรรม การทำงานร่วมกับผู้อื่น</p>
+                </div>
+                <div class="bg-teal-50/80 p-5 rounded-3xl border border-teal-100 text-center hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-2">🎯</div>
+                    <h3 class="font-bold text-gray-800">เป้าหมาย</h3>
+                    <p class="text-xs text-gray-600 mt-1">มีเป้าหมายที่ชัดเจน และพร้อมเติบโต</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PROFILE (ประวัติส่วนตัว) -->
+        <section id="page-profile" class="page-content">
+            <div class="text-center mb-8">
+                <h2 class="heading-font text-3xl font-bold text-gray-800 mb-2">👤 ประวัติส่วนตัว</h2>
+                <p class="text-gray-500">ข้อมูลทั่วไป นิสัย และความสนใจของฉัน</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Personal Info Details Card -->
+                <div class="cute-card p-6 border border-pink-100 md:col-span-2">
+                    <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span class="text-pink-400"><i class="fa-solid fa-address-card"></i></span> ข้อมูลทั่วไป
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100">
+                            <span class="text-xs text-gray-400 block font-medium">ชื่อ-นามสกุล</span>
+                            <span class="font-semibold text-gray-700">นาย/นางสาว ใส่ชื่อจริง นามสกุล</span>
+                        </div>
+                        <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100">
+                            <span class="text-xs text-gray-400 block font-medium">ชื่อเล่น</span>
+                            <span class="font-semibold text-gray-700">ชื่อเล่น (Nickname)</span>
+                        </div>
+                        <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100">
+                            <span class="text-xs text-gray-400 block font-medium">วันเกิด</span>
+                            <span class="font-semibold text-gray-700">1 มกราคม 254X (อายุ XX ปี)</span>
+                        </div>
+                        <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100">
+                            <span class="text-xs text-gray-400 block font-medium">สัญชาติ / เชื้อชาติ</span>
+                            <span class="font-semibold text-gray-700">ไทย / ไทย</span>
+                        </div>
+                        <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100 sm:col-span-2">
+                            <span class="text-xs text-gray-400 block font-medium">ที่อยู่ปัจจุบัน</span>
+                            <span class="font-semibold text-gray-700">กรุงเทพมหานคร, ประเทศไทย</span>
+                        </div>
+                    </div>
+
+                    <h3 class="heading-font text-xl font-bold text-gray-800 mt-6 mb-3 flex items-center gap-2">
+                        <span class="text-amber-400"><i class="fa-solid fa-face-smile"></i></span> บุคลิกภาพ & จุดเด่น
+                    </h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        เป็นคนมีความรับผิดชอบ มนุษยสัมพันธ์ดี ปรับตัวเข้ากับผู้อื่นได้ง่าย ตรงต่อเวลา ชอบเรียนรู้สิ่งใหม่ๆ และแก้ปัญหาด้วยทัศนคติเชิงบวก
+                    </p>
+                </div>
+
+                <!-- Hobbies & Soft Skills Card -->
+                <div class="cute-card p-6 border border-pink-100 flex flex-col justify-between">
+                    <div>
+                        <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                            <span class="text-purple-400"><i class="fa-solid fa-heart"></i></span> งานอดิเรก
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-purple-50/60 border border-purple-100">
+                                <span class="text-2xl">📚</span>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-700">อ่านหนังสือ & บทความ</p>
+                                    <p class="text-[11px] text-gray-500">พัฒนาความรู้และเปิดมุมมองใหม่</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-purple-50/60 border border-purple-100">
+                                <span class="text-2xl">🎨</span>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-700">วาดภาพ / ทำกราฟิก</p>
+                                    <p class="text-[11px] text-gray-500">ฝึกความคิดสร้างสรรค์</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-purple-50/60 border border-purple-100">
+                                <span class="text-2xl">🎵</span>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-700">ฟังเพลง & ผ่อนคลาย</p>
+                                    <p class="text-[11px] text-gray-500">สร้างสมาธิในการทำงาน</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-pink-100">
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Soft Skills</h4>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="bg-pink-100 text-pink-600 px-2.5 py-1 rounded-full text-xs font-medium">🌱 การทำงานเป็นทีม</span>
+                            <span class="bg-amber-100 text-amber-700 px-2.5 py-1 rounded-full text-xs font-medium">💡 การสื่อสาร</span>
+                            <span class="bg-sky-100 text-sky-600 px-2.5 py-1 rounded-full text-xs font-medium">💬 ความตรงต่อเวลา</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: EDUCATION (ประวัติการศึกษา) -->
+        <section id="page-education" class="page-content">
+            <div class="text-center mb-8">
+                <h2 class="heading-font text-3xl font-bold text-gray-800 mb-2">🎓 ประวัติการศึกษา</h2>
+                <p class="text-gray-500">เส้นทางการเรียนรู้ตั้งแต่อดีตจนถึงปัจจุบัน</p>
+            </div>
+
+            <div class="cute-card p-6 md:p-8 border border-pink-100">
+                <div class="relative border-l-2 border-pink-200 ml-4 md:ml-6 space-y-8">
+                    <!-- Education Timeline 1: University -->
+                    <div class="relative pl-6 md:pl-8">
+                        <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-pink-300 text-white flex items-center justify-center text-sm shadow">
+                            🎓
+                        </span>
+                        <span class="inline-block bg-pink-100 text-pink-600 text-xs px-2.5 py-0.5 rounded-full font-bold mb-1">
+                            ปี พ.ศ. 2564 - 2568
+                        </span>
+                        <h3 class="heading-font text-lg font-bold text-gray-800">ระดับอุดมศึกษา (ปริญญาตรี)</h3>
+                        <p class="text-sm font-semibold text-pink-500">มหาวิทยาลัยชื่อดัง / สาขาวิชาของคุณ</p>
+                        <p class="text-xs text-gray-500 mb-2">เกรดเฉลี่ยสะสม (GPAX): 3.50 (เกียรตินิยม)</p>
+                        <p class="text-sm text-gray-600 leading-relaxed bg-pink-50/50 p-3 rounded-xl border border-pink-100">
+                            เน้นศึกษาทฤษฎีและการปฏิบัติในสาขาวิชา ทำโครงงานจบการศึกษา (Senior Project) เรื่อง การพัฒนาเว็บแอปพลิเคชันสำหรับชุมชน
+                        </p>
+                    </div>
+
+                    <!-- Education Timeline 2: High School -->
+                    <div class="relative pl-6 md:pl-8">
+                        <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-amber-300 text-white flex items-center justify-center text-sm shadow">
+                            🏫
+                        </span>
+                        <span class="inline-block bg-amber-100 text-amber-700 text-xs px-2.5 py-0.5 rounded-full font-bold mb-1">
+                            ปี พ.ศ. 2561 - 2564
+                        </span>
+                        <h3 class="heading-font text-lg font-bold text-gray-800">ระดับมัธยมศึกษาตอนปลาย</h3>
+                        <p class="text-sm font-semibold text-amber-600">โรงเรียนของคุณ (แผนการเรียน วิทย์-คณิต / ศิลป์-คำนวณ)</p>
+                        <p class="text-xs text-gray-500 mb-2">เกรดเฉลี่ยสะสม (GPAX): 3.80</p>
+                        <p class="text-sm text-gray-600 leading-relaxed bg-amber-50/50 p-3 rounded-xl border border-amber-100">
+                            เข้าร่วมกิจกรรมของโรงเรียน เป็นตัวแทนแข่งขันตอบปัญหาทางวิชาการ และได้รับรางวัลเรียนดี
+                        </p>
+                    </div>
+
+                    <!-- Education Timeline 3: Junior High School -->
+                    <div class="relative pl-6 md:pl-8">
+                        <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-teal-300 text-white flex items-center justify-center text-sm shadow">
+                            ✏️
+                        </span>
+                        <span class="inline-block bg-teal-
