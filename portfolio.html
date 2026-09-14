@@ -3,89 +3,658 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | ประวัติส่วนตัว</title>
-  <link rel="stylesheet" href="style.css">
+
+  <title>My Portfolio ♡</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Prompt", sans-serif;
+      background: #fff8fb;
+      color: #5d5360;
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    nav {
+      width: 100%;
+      height: 75px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 8%;
+
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: "Itim", cursive;
+      font-size: 30px;
+      color: #df7fa1;
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #655b63;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #df7fa1;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 120px 10% 70px;
+
+      position: relative;
+
+      background:
+        radial-gradient(circle at 10% 20%, #ffddea 0 7%, transparent 8%),
+        radial-gradient(circle at 90% 80%, #e9dcff 0 8%, transparent 9%),
+        #fff8fb;
+    }
+
+
+    /* ข้อความ */
+
+    .hero-text {
+      width: 55%;
+      z-index: 2;
+    }
+
+    .small-text {
+      color: #df7fa1;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-family: "Itim", cursive;
+      font-size: 75px;
+      line-height: 1.1;
+      color: #65556b;
+    }
+
+    .hero h1 span {
+      color: #df7fa1;
+    }
+
+    .hero h2 {
+      font-family: "Itim", cursive;
+      font-size: 35px;
+      color: #a18ab5;
+      margin: 10px 0 20px;
+    }
+
+    .description {
+      max-width: 570px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: #766b74;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+
+      padding: 12px 27px;
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      background: #df7fa1;
+      color: white;
+
+      box-shadow: 0 10px 25px rgba(223,127,161,0.25);
+
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn2 {
+      background: white;
+      color: #df7fa1;
+      border: 2px solid #f2c4d4;
+      box-shadow: none;
+    }
+
+
+    /* =========================
+       PROFILE
+    ========================= */
+
+    .profile {
+      width: 350px;
+      height: 430px;
+
+      background: #f8d9e5;
+
+      border-radius: 48% 48% 45% 45%;
+
+      padding: 12px;
+
+      transform: rotate(4deg);
+
+      box-shadow: 0 25px 60px rgba(180,120,150,0.18);
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: inherit;
+    }
+
+
+    /* ของตกแต่ง */
+
+    .heart {
+      position: absolute;
+
+      font-size: 55px;
+
+      color: #df7fa1;
+
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .heart1 {
+      top: -35px;
+      left: -35px;
+    }
+
+    .heart2 {
+      bottom: -35px;
+      right: -35px;
+    }
+
+    .star {
+      position: absolute;
+
+      font-size: 35px;
+
+      color: #b69bd2;
+
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    .star1 {
+      top: 30px;
+      right: -50px;
+    }
+
+    .star2 {
+      bottom: 50px;
+      left: -55px;
+    }
+
+
+    /* =========================
+       DECORATION
+    ========================= */
+
+    .bubble {
+      position: absolute;
+
+      width: 100px;
+      height: 100px;
+
+      border-radius: 50%;
+
+      background: #f5dceb;
+
+      opacity: 0.5;
+
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .bubble1 {
+      top: 18%;
+      right: 5%;
+    }
+
+    .bubble2 {
+      bottom: 10%;
+      left: 4%;
+
+      width: 70px;
+      height: 70px;
+
+      background: #ded2f5;
+    }
+
+
+    /* =========================
+       ABOUT PREVIEW
+    ========================= */
+
+    .about {
+      padding: 80px 10%;
+
+      text-align: center;
+
+      background: #fff;
+    }
+
+    .about-title {
+      font-family: "Itim", cursive;
+      font-size: 45px;
+      color: #8d759a;
+    }
+
+    .about-title span {
+      color: #df7fa1;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: 15px auto 40px;
+
+      line-height: 1.8;
+    }
+
+
+    .cards {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+
+      max-width: 1000px;
+
+      margin: auto;
+    }
+
+    .card {
+      padding: 30px 20px;
+
+      border-radius: 25px;
+
+      background: #fff8fb;
+
+      border: 1px solid #f7dce6;
+
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+
+      box-shadow: 0 15px 30px rgba(180,120,150,0.12);
+    }
+
+    .card-icon {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-family: "Itim", cursive;
+      font-size: 27px;
+      color: #df7fa1;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      text-align: center;
+
+      padding: 25px;
+
+      background: #fff0f6;
+
+      color: #9b7b88;
+    }
+
+
+    /* =========================
+       ANIMATION
+    ========================= */
+
+    @keyframes float {
+
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 0 5%;
+      }
+
+      .menu {
+        gap: 10px;
+      }
+
+      .menu a {
+        font-size: 12px;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 120px 25px 70px;
+
+        gap: 50px;
+      }
+
+      .hero-text {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 55px;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .profile {
+        width: 270px;
+        height: 340px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<nav>
-  <div class="logo">🎀 MY PORTFOLIO</div>
 
-  <div class="menu">
-    <a href="index.html">หน้าปก</a>
-    <a class="active" href="profile.html">ประวัติ</a>
-    <a href="education.html">การศึกษา</a>
-    <a href="activities.html">กิจกรรม</a>
-    <a href="certificates.html">เกียรติบัตร</a>
-    <a href="works.html">ผลงาน</a>
-    <a href="goals.html">เป้าหมาย</a>
-    <a href="contact.html">ติดต่อ</a>
-  </div>
-</nav>
+  <!-- =========================
+       NAVBAR
+  ========================= -->
 
-<main class="page">
+  <nav>
 
-  <div class="page-title">
-    <span>🌸 ABOUT ME 🌸</span>
-    <h1>ประวัติส่วนตัว</h1>
-    <p>มาทำความรู้จักฉันกันนะคะ ♡</p>
-  </div>
+    <a href="index.html" class="logo">
+      ♡ My Portfolio
+    </a>
 
-  <section class="content-card">
+    <div class="menu">
 
-    <div class="photo-box">
-      <div class="photo-placeholder">👩🏻‍🎓</div>
-      <span class="photo-decor">🌷</span>
+      <a href="index.html">🏠 Home</a>
+
+      <a href="about.html">🌷 About</a>
+
+      <a href="education.html">🎓 Education</a>
+
+      <a href="skills.html">✨ Skills</a>
+
+      <a href="projects.html">💻 Projects</a>
+
+      <a href="activities.html">🌈 Activities</a>
+
+      <a href="certificates.html">🏆 Certificates</a>
+
     </div>
 
-    <div class="info">
+  </nav>
 
-      <h2>สวัสดีค่ะ! 💗</h2>
 
-      <p>
-        ฉันชื่อ <b>น้องน่ารัก</b>
-        เป็นคนที่มีความสนใจในการเรียนรู้สิ่งใหม่ ๆ
-        และชอบพัฒนาตัวเองอยู่เสมอ
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+
+    <div class="bubble bubble1"></div>
+
+    <div class="bubble bubble2"></div>
+
+
+    <div class="hero-text">
+
+      <p class="small-text">
+        ✿ Welcome to my portfolio ✿
       </p>
 
-      <div class="info-list">
+      <h1>
+        Hello, I'm
+        <span>YOUR NAME</span> ♡
+      </h1>
 
-        <div>
-          <b>ชื่อ - นามสกุล</b>
-          <span>น้องน่ารัก ใจดี</span>
-        </div>
+      <h2>
+        Student • Creator • Dreamer 🌷
+      </h2>
 
-        <div>
-          <b>ชื่อเล่น</b>
-          <span>น่ารัก</span>
-        </div>
+      <p class="description">
+        สวัสดีค่ะ! ยินดีต้อนรับเข้าสู่ Portfolio
+        ของฉัน เว็บไซต์เล็ก ๆ ที่รวบรวมประวัติ
+        การศึกษา ทักษะ ผลงาน กิจกรรม
+        และเรื่องราวต่าง ๆ ของฉันเอาไว้ 💗
+      </p>
 
-        <div>
-          <b>วันเกิด</b>
-          <span>1 มกราคม 2550</span>
-        </div>
 
-        <div>
-          <b>งานอดิเรก</b>
-          <span>ฟังเพลง 🎧 อ่านหนังสือ 📖 ถ่ายรูป 📷</span>
-        </div>
+      <div class="buttons">
+
+        <a href="about.html" class="btn">
+          🌸 About Me
+        </a>
+
+        <a href="projects.html" class="btn btn2">
+          💻 My Projects
+        </a>
 
       </div>
 
     </div>
 
+
+    <!-- รูปโปรไฟล์ -->
+
+    <div class="profile">
+
+      <!-- เปลี่ยนรูปตรงนี้ -->
+      <img src="images/profile.jpg" alt="My Profile">
+
+      <div class="heart heart1">
+        ♡
+      </div>
+
+      <div class="heart heart2">
+        ♡
+      </div>
+
+      <div class="star star1">
+        ✦
+      </div>
+
+      <div class="star star2">
+        ✧
+      </div>
+
+    </div>
+
+
   </section>
 
-  <section class="quote-card">
-    ✨ “ความสำเร็จเริ่มต้นจากการไม่หยุดพยายาม” ✨
+
+  <!-- =========================
+       ABOUT PREVIEW
+  ========================= -->
+
+  <section class="about">
+
+    <p class="small-text">
+      ♡ A LITTLE ABOUT ME ♡
+    </p>
+
+    <h2 class="about-title">
+      My Little <span>World</span> 🌷
+    </h2>
+
+    <p>
+      พื้นที่เล็ก ๆ ที่รวบรวมสิ่งที่ฉันชอบ
+      สิ่งที่ฉันเรียนรู้ และผลงานที่ฉันภูมิใจ
+    </p>
+
+
+    <div class="cards">
+
+
+      <div class="card">
+
+        <div class="card-icon">
+          🎓
+        </div>
+
+        <h3>
+          Education
+        </h3>
+
+        <p>
+          ประวัติการศึกษา
+          และเส้นทางการเรียนรู้ของฉัน
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">
+          💻
+        </div>
+
+        <h3>
+          Projects
+        </h3>
+
+        <p>
+          ผลงานและโครงงาน
+          ที่ฉันตั้งใจสร้างขึ้น
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">
+          🏆
+        </div>
+
+        <h3>
+          Certificates
+        </h3>
+
+        <p>
+          เกียรติบัตรและ
+          ความสำเร็จต่าง ๆ
+        </p>
+
+      </div>
+
+
+    </div>
+
   </section>
 
-</main>
 
-<footer>
-  Made with ♡ by น้องน่ารัก
-</footer>
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      Made with ♡ by YOUR NAME
+    </p>
+
+  </footer>
+
 
 </body>
 </html>
