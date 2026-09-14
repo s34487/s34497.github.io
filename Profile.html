@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Portfolio ✨ - ประวัติส่วนตัว</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-pink-200 selection:text-pink-800">
+
+    <!-- Top Header Navigation -->
+    <header class="sticky top-3 z-50 px-3 md:px-4 max-w-5xl mx-auto w-full">
+        <nav class="bg-white/90 backdrop-blur-md p-2 rounded-full shadow-lg border border-pink-100 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
+            <a href="index.html" class="flex items-center gap-2 pl-3 group shrink-0">
+                <span class="text-2xl group-hover:rotate-12 transition-transform duration-300">🎀</span>
+                <span class="heading-font text-lg md:text-xl font-bold bg-gradient-to-r from-pink-400 to-orange-300 bg-clip-text text-transparent">
+                    MyPortfolio
+                </span>
+            </a>
+
+            <div class="flex items-center gap-1 text-xs md:text-sm overflow-x-auto no-scrollbar py-1">
+                <a href="index.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-house"></i> <span>หน้าหลัก</span>
+                </a>
+                <a href="profile.html" class="nav-pill active px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-user"></i> <span>ประวัติ</span>
+                </a>
+                <a href="education.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-graduation-cap"></i> <span>การศึกษา</span>
+                </a>
+                <a href="activities.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-icons"></i> <span>กิจกรรม</span>
+                </a>
+                <a href="goals.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-bullseye"></i> <span>เป้าหมาย</span>
+                </a>
+                <a href="contact.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-paper-plane"></i> <span>ติดต่อ</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="text-center mb-8">
+            <h2 class="heading-font text-3xl font-bold text-gray-800 mb-2">👤 ประวัติส่วนตัว</h2>
+            <p class="text-gray-500">ข้อมูลทั่วไป นิสัย และความสนใจของฉัน</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="cute-card p-6 border border-pink-100 md:col-span-2">
+                <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <span class="text-pink-400"><i class="fa-solid fa-address-card"></i></span> ข้อมูลทั่วไป
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                    <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100">
+                        <span class="text-xs text-gray-400 block font-medium">ชื่อ-นามสกุล</span>
+                        <span class="font-semibold text-gray-700">นาย/นางสาว ใส่ชื่อจริง นามสกุล</span>
+                    </div>
+                    <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100">
+                        <span class="text-xs text-gray-400 block font-medium">ชื่อเล่น</span>
+                        <span class="font-semibold text-gray-700">ชื่อเล่น (Nickname)</span>
+                    </div>
+                    <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100">
+                        <span class="text-xs text-gray-400 block font-medium">วันเกิด</span>
+                        <span class="font-semibold text-gray-700">1 มกราคม 254X (อายุ XX ปี)</span>
+                    </div>
+                    <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100">
+                        <span class="text-xs text-gray-400 block font-medium">สัญชาติ / เชื้อชาติ</span>
+                        <span class="font-semibold text-gray-700">ไทย / ไทย</span>
+                    </div>
+                    <div class="p-3 bg-pink-50/60 rounded-2xl border border-pink-100 sm:col-span-2">
+                        <span class="text-xs text-gray-400 block font-medium">ที่อยู่ปัจจุบัน</span>
+                        <span class="font-semibold text-gray-700">กรุงเทพมหานคร, ประเทศไทย</span>
+                    </div>
+                </div>
+
+                <h3 class="heading-font text-xl font-bold text-gray-800 mt-6 mb-3 flex items-center gap-2">
+                    <span class="text-amber-400"><i class="fa-solid fa-face-smile"></i></span> บุคลิกภาพ & จุดเด่น
+                </h3>
+                <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                    เป็นคนมีความรับผิดชอบ มนุษยสัมพันธ์ดี ปรับตัวเข้ากับผู้อื่นได้ง่าย ตรงต่อเวลา ชอบเรียนรู้สิ่งใหม่ๆ และแก้ปัญหาด้วยทัศนคติเชิงบวก
+                </p>
+            </div>
+
+            <div class="cute-card p-6 border border-pink-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span class="text-purple-400"><i class="fa-solid fa-heart"></i></span> งานอดิเรก
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-purple-50/60 border border-purple-100">
+                            <span class="text-2xl">📚</span>
+                            <div>
+                                <p class="text-xs font-bold text-gray-700">อ่านหนังสือ & บทความ</p>
+                                <p class="text-[11px] text-gray-500">พัฒนาความรู้และเปิดมุมมองใหม่</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-purple-50/60 border border-purple-100">
+                            <span class="text-2xl">🎨</span>
+                            <div>
+                                <p class="text-xs font-bold text-gray-700">วาดภาพ / ทำกราฟิก</p>
+                                <p class="text-[11px] text-gray-500">ฝึกความคิดสร้างสรรค์</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-purple-50/60 border border-purple-100">
+                            <span class="text-2xl">🎵</span>
+                            <div>
+                                <p class="text-xs font-bold text-gray-700">ฟังเพลง & ผ่อนคลาย</p>
+                                <p class="text-[11px] text-gray-500">สร้างสมาธิในการทำงาน</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-pink-100">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Soft Skills</h4>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-pink-100 text-pink-600 px-2.5 py-1 rounded-full text-xs font-medium">🌱 การทำงานเป็นทีม</span>
+                        <span class="bg-amber-100 text-amber-700 px-2.5 py-1 rounded-full text-xs font-medium">💡 การสื่อสาร</span>
+                        <span class="bg-sky-100 text-sky-600 px-2.5 py-1 rounded-full text-xs font-medium">💬 ความตรงต่อเวลา</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-gray-400">
+        <p>Made with 💖 • Created for GitHub Pages Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
