@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Portfolio ✨ - ติดต่อฉัน</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-pink-200 selection:text-pink-800">
+
+    <!-- Top Header Navigation -->
+    <header class="sticky top-3 z-50 px-3 md:px-4 max-w-5xl mx-auto w-full">
+        <nav class="bg-white/90 backdrop-blur-md p-2 rounded-full shadow-lg border border-pink-100 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
+            <a href="index.html" class="flex items-center gap-2 pl-3 group shrink-0">
+                <span class="text-2xl group-hover:rotate-12 transition-transform duration-300">🎀</span>
+                <span class="heading-font text-lg md:text-xl font-bold bg-gradient-to-r from-pink-400 to-orange-300 bg-clip-text text-transparent">
+                    MyPortfolio
+                </span>
+            </a>
+
+            <div class="flex items-center gap-1 text-xs md:text-sm overflow-x-auto no-scrollbar py-1">
+                <a href="index.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-house"></i> <span>หน้าหลัก</span>
+                </a>
+                <a href="profile.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-user"></i> <span>ประวัติ</span>
+                </a>
+                <a href="education.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-graduation-cap"></i> <span>การศึกษา</span>
+                </a>
+                <a href="activities.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-icons"></i> <span>กิจกรรม</span>
+                </a>
+                <a href="goals.html" class="nav-pill px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-bullseye"></i> <span>เป้าหมาย</span>
+                </a>
+                <a href="contact.html" class="nav-pill active px-3 md:px-4 py-1.5 md:py-2 text-gray-600 hover:text-pink-500 flex items-center gap-1.5">
+                    <i class="fa-solid fa-paper-plane"></i> <span>ติดต่อ</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="text-center mb-8">
+            <h2 class="heading-font text-3xl font-bold text-gray-800 mb-2">💌 ติดต่อฉัน</h2>
+            <p class="text-gray-500">หากสนใจร่วมงาน หรือพูดคุย สามารถติดต่อได้ตามช่องทางนี้เลยครับ!</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Contact Info Card -->
+            <div class="cute-card p-6 border border-pink-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="heading-font text-xl font-bold text-gray-800 mb-4">ช่องทางการติดต่อ</h3>
+                    
+                    <div class="space-y-3.5">
+                        <div class="flex items-center gap-4 p-3 rounded-2xl bg-pink-50/70 border border-pink-100">
+                            <div class="w-10 h-10 rounded-full bg-pink-200 text-pink-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="text-xs text-gray-400 font-medium">อีเมล</p>
+                                <p class="text-sm font-bold text-gray-700 truncate">yourname@email.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-3 rounded-2xl bg-amber-50/70 border border-amber-100">
+                            <div class="w-10 h-10 rounded-full bg-amber-200 text-amber-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-medium">เบอร์โทรศัพท์</p>
+                                <p class="text-sm font-bold text-gray-700">08X-XXX-XXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-3 rounded-2xl bg-purple-50/70 border border-purple-100">
+                            <div class="w-10 h-10 rounded-full bg-purple-200 text-purple-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-medium">ที่อยู่</p>
+                                <p class="text-sm font-bold text-gray-700">กรุงเทพมหานคร, ประเทศไทย</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-pink-100">
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">ติดตามฉันได้ที่</p>
+                    <div class="flex gap-3">
+                        <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center text-lg transition-colors">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-600 flex items-center justify-center text-lg transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-sky-100 hover:bg-sky-200 text-sky-500 flex items-center justify-center text-lg transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-pink-100 hover:bg-pink-200 text-pink-500 flex items-center justify-center text-lg transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cute-card p-6 border border-pink-100">
+                <h3 class="heading-font text-xl font-bold text-gray-800 mb-4">ส่งข้อความหาฉัน</h3>
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-3.5">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">ชื่อของคุณ</label>
+                        <input type="text" required placeholder="ใส่ชื่อของคุณ..." class="w-full px-4 py-2.5 rounded-2xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300 text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">อีเมลตอบกลับ</label>
+                        <input type="email" required placeholder="example@email.com" class="w-full px-4 py-2.5 rounded-2xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300 text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">ข้อความ</label>
+                        <textarea rows="4" required placeholder="เขียนข้อความที่ต้องการติดต่อที่นี่..." class="w-full px-4 py-2.5 rounded-2xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300 text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full btn-cute text-white font-medium py-3 rounded-2xl flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> ส่งข้อความ ✨
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification Modal -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-white border-2 border-pink-300 px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none z-50">
+        <span class="text-2xl">💖</span>
+        <span id="toast-message" class="text-sm font-medium text-gray-700">ส่งข้อความเรียบร้อยแล้ว!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-gray-400">
+        <p>Made with 💖 • Created for GitHub Pages Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
