@@ -3,67 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio 💗</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">🎀 MY PORTFOLIO</div>
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">♡ My Portfolio</a>
 
-  <div class="menu">
-    <a class="active" href="index.html">หน้าปก</a>
-    <a href="profile.html">ประวัติ</a>
-    <a href="education.html">การศึกษา</a>
-    <a href="activities.html">กิจกรรม</a>
-    <a href="certificates.html">เกียรติบัตร</a>
-    <a href="works.html">ผลงาน</a>
-    <a href="goals.html">เป้าหมาย</a>
-    <a href="contact.html">ติดต่อ</a>
-  </div>
-</nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-<main class="cover">
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">🏠 Home</a>
+      <a href="about.html">🌷 About</a>
+      <a href="education.html">🎓 Education</a>
+      <a href="skills.html">✨ Skills</a>
+      <a href="projects.html">💻 Projects</a>
+      <a href="activities.html">🌈 Activities</a>
+      <a href="certificates.html">🏆 Certificates</a>
+      <a href="contact.html">💌 Contact</a>
+    </div>
+  </nav>
+</header>
 
-  <div class="cover-card">
+<main>
 
-    <div class="decor top">🌸 ✦ ♡ ✦ 🌷</div>
+  <section class="hero">
 
-    <p class="small-title">PORTFOLIO</p>
+    <div class="hero-text">
+      <p class="hello">สวัสดีค่ะ! 👋🏻</p>
 
-    <div class="profile-circle">
-      <span>👩🏻‍🎓</span>
+      <h1>
+        I'm <span>YOUR NAME</span>
+      </h1>
+
+      <h2>Welcome to my Portfolio 🌷</h2>
+
+      <p>
+        ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของฉัน
+        ที่รวบรวมประวัติ การศึกษา ทักษะ ผลงาน
+        และกิจกรรมต่าง ๆ ไว้ในที่เดียว
+      </p>
+
+      <div class="hero-buttons">
+        <a href="about.html" class="btn">🌸 About Me</a>
+        <a href="projects.html" class="btn btn-outline">💻 My Projects</a>
+      </div>
     </div>
 
-    <h1>น้องน่ารัก</h1>
+    <div class="profile-card">
+      <div class="sparkle">✦</div>
+      <img src="images/profile.jpg" alt="Profile">
+      <div class="heart">♡</div>
+    </div>
 
-    <h2>แฟ้มสะสมผลงาน</h2>
+  </section>
 
-    <p class="intro">
-      รวบรวมประวัติส่วนตัว การศึกษา<br>
-      กิจกรรม ผลงาน และความสามารถของฉัน
+  <section class="welcome">
+    <p class="section-label">♡ NICE TO MEET YOU ♡</p>
+
+    <h2>My Little Portfolio 🌷</h2>
+
+    <p>
+      เว็บไซต์เล็ก ๆ ที่รวบรวมเรื่องราวและผลงานของฉัน
+      ตั้งแต่การเรียน กิจกรรม ไปจนถึงสิ่งที่ฉันชอบและสนใจ
     </p>
 
-    <div class="cover-info">
-      <span>🎓 นักเรียน / นักศึกษา</span>
-      <span>🌷 ปีการศึกษา 2569</span>
+    <div class="quick-cards">
+
+      <a href="education.html" class="quick-card">
+        <span>🎓</span>
+        <h3>Education</h3>
+        <p>ประวัติการศึกษา</p>
+      </a>
+
+      <a href="skills.html" class="quick-card">
+        <span>✨</span>
+        <h3>Skills</h3>
+        <p>ทักษะและความสามารถ</p>
+      </a>
+
+      <a href="projects.html" class="quick-card">
+        <span>💻</span>
+        <h3>Projects</h3>
+        <p>ผลงานของฉัน</p>
+      </a>
+
+      <a href="certificates.html" class="quick-card">
+        <span>🏆</span>
+        <h3>Certificates</h3>
+        <p>เกียรติบัตร</p>
+      </a>
+
     </div>
-
-    <a href="profile.html" class="cute-btn">
-      เปิด Portfolio 💗
-    </a>
-
-    <div class="decor bottom">♡ 🌼 ♡ 🌼 ♡</div>
-
-  </div>
+  </section>
 
 </main>
 
 <footer>
-  Made with ♡ by น้องน่ารัก
+  <p>Made with ♡ by YOUR NAME</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
