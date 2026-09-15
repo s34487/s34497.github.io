@@ -1,41 +1,63 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - หน้าแรก</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">MY PORTFOLIO</div>
-            <ul>
-                <li><a href="index.html" class="active">Index</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <div class="card" style="text-align: center; padding: 4rem 2rem;">
-            <!-- คุณสามารถเปลี่ยน src รูปโปรไฟล์ตรงนี้ได้ -->
-            <img src="https://via.placeholder.com/150" alt="Profile" style="border-radius: 50%; border: 4px solid #FFD97D; margin-bottom: 1rem;">
-            <h1>ยินดีต้อนรับสู่ แฟ้มสะสมผลงาน</h1>
-            <p style="font-size: 1.2rem; color: #6C757D; margin-top: 0.5rem;">
-                สวัสดีครับ/ค่ะ! นี่คือเว็บไซต์ยื่นแฟ้มสะสมผลงานเข้ามหาวิทยาลัยของ [ใส่ชื่อ-นามสกุลของคุณ]
-            </p>
-            <p style="margin-top: 1rem; color: #888;">มุ่งมั่น พัฒนา และพร้อมเรียนรู้สิ่งใหม่ๆ เสมอ ✨</p>
-            <a href="about.html" class="btn">ทำความรู้จักกันเพิ่มเติม ➔</a>
+<header class="navbar">
+    <div class="logo">♡ My Portfolio</div>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="activities.html">Activities</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="home">
+
+    <div class="home-text fade-up">
+        <p class="small-title">WELCOME TO MY PORTFOLIO ♡</p>
+
+        <h1>Hello, I'm<br>
+            <span>Your Name</span>
+        </h1>
+
+        <p class="description">
+            A student who loves learning new things,
+            creating new ideas and exploring new experiences.
+        </p>
+
+        <div class="buttons">
+            <a href="about.html" class="btn pink">About Me ♡</a>
+            <a href="activities.html" class="btn yellow">My Activities</a>
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <p>© Portfolio for University Application</p>
-    </footer>
+    <div class="home-image fade-in">
+        <div class="image-circle">
+            <img src="images/profile.jpg" alt="Profile">
+        </div>
+
+        <div class="deco star">✦</div>
+        <div class="deco heart">♡</div>
+        <div class="deco flower">✿</div>
+    </div>
+
+</main>
+
+<div class="floating">♡</div>
+<div class="floating two">✦</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
