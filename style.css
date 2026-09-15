@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf4;
+    color: #5b4b4b;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Itim', cursive;
+    font-size: 25px;
+    color: #e995ad;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6d5b5b;
+    font-size: 14px;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: #e995ad;
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    color: #e995ad;
+}
+
+nav a.active::after {
+    content: "♡";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -17px;
+    font-size: 12px;
+}
+
+/* ================= HOME ================= */
+
+.home {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 8%;
+}
+
+.home-text {
+    max-width: 550px;
+}
+
+.small-title {
+    color: #e5a3b6;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    font-family: 'Itim', cursive;
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 0.95;
+    color: #594a4a;
+}
+
+.home h1 span {
+    color: #e99db5;
+}
+
+.description {
+    margin-top: 25px;
+    line-height: 1.8;
+    max-width: 480px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+.pink {
+    background: #f6c2d2;
+    color: white;
+}
+
+.yellow {
+    background: #ffe7a3;
+    color: #6b5a45;
+}
+
+.home-image {
+    position: relative;
+}
+
+.image-circle {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: #ffe8a9;
+    padding: 15px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.deco {
+    position: absolute;
+    font-size: 35px;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.star {
+    top: 10px;
+    right: -20px;
+    color: #f0c75e;
+}
+
+.heart {
+    bottom: 20px;
+    left: -30px;
+    color: #e99db5;
+}
+
+.flower {
+    top: 50%;
+    right: -45px;
+    color: #e99db5;
+}
+
+/* ================= PAGE ================= */
+
+.page {
+    min-height: 100vh;
+    padding: 80px 8%;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-title p {
+    color: #e5a3b6;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.page-title h1 {
+    font-family: 'Itim', cursive;
+    font-size: 60px;
+    margin-top: 5px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image {
+    width: 320px;
+    height: 400px;
+    padding: 12px;
+    background: #f7c7d5;
+    border-radius: 40px;
+    transform: rotate(-3deg);
+    transition: 0.4s;
+}
+
+.about-image:hover {
+    transform: rotate(0) scale(1.03);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.about-card {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(200,150,150,0.12);
+}
+
+.about-card h2 {
+    font-family: 'Itim', cursive;
+    font-size: 35px;
+    color: #e596af;
+    margin-bottom: 15px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.info-box {
+    background: #fff8df;
+    padding: 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-7px);
+    background: #ffeef3;
+}
+
+.info-box span {
+    font-size: 22px;
+}
+
+.info-box b {
+    display: block;
+    font-size: 13px;
+}
+
+.info-box p {
+    font-size: 12px;
+}
+
+/* ================= EDUCATION ================= */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #f5cad6;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    min-width: 52px;
+    height: 52px;
+    background: #ffe8a7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.timeline-card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 25px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(200,150,150,0.1);
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    transform: translateX(10px);
+}
+
+.timeline-card span {
+    color: #e59caf;
+    font-size: 12px;
+}
+
+.timeline-card h2 {
+    font-family: 'Itim', cursive;
+    margin: 5px 0;
+}
+
+/* ================= ACTIVITIES ================= */
+
+.card-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(200,150,150,0.1);
+    transition: 0.4s;
+}
+
+.activity-card:hover {
+    transform: translateY(-12px) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(200,150,150,0.18);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content span {
+    color: #e59caf;
+    font-size: 12px;
+}
+
+.card-content h2 {
+    font-family: 'Itim', cursive;
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+/* ================= CERTIFICATES ================= */
+
+.certificate-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.certificate {
+    background: white;
+    padding: 15px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(200,150,150,0.1);
+    transition: 0.4s;
+}
+
+.certificate:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.certificate img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.certificate h3 {
+    font-family: 'Itim', cursive;
+    margin-top: 12px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+}
+
+.contact-box {
+    background: white;
+    padding: 60px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(200,150,150,0.12);
+}
+
+.contact-box > p:first-child {
+    color: #e59caf;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.contact-box h1 {
+    font-family: 'Itim', cursive;
+    font-size: 70px;
+    color: #e99db5;
+}
+
+.contact-text {
+    line-height: 1.8;
+    margin: 15px auto 30px;
+}
+
+.contact-links {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    background: #fff8df;
+    padding: 17px;
+    border-radius: 20px;
+    color: #5b4b4b;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: #ffeef3;
+    transform: translateY(-5px);
+}
+
+.contact-links span {
+    display: block;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* ================= ANIMATION ================= */
+
+.fade-up {
+    animation: fadeUp 1s ease both;
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .image-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title h1 {
+        font-size: 48px;
+    }
+
+    .contact-box {
+        padding: 40px 25px;
+    }
+
+    .contact-box h1 {
+        font-size: 55px;
+    }
+}
