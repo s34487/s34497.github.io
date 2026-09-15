@@ -1,0 +1,143 @@
+/* นำเข้าฟอนต์นุ่มๆ สดใส อ่านง่าย */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #FAF8F5; /* สีพื้นหลังครีมอุ่นๆ */
+    color: #4A4A4A;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* แถบเมนูเนวิเกชัน */
+header {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #FF8B8B; /* สีส้มอมชมพูสดใส */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6C757D;
+    font-weight: 400;
+    padding: 0.5rem 0.8rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #FF8B8B;
+    background-color: #FFF0F0;
+    font-weight: 500;
+}
+
+/* พื้นที่เนื้อหาหลัก */
+main {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+    width: 100%;
+}
+
+/* กล่องการ์ดเนื้อหา */
+.card {
+    background: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    border: 1px solid #F0EAE1;
+}
+
+h1 {
+    color: #FF8B8B;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: #FFD97D; /* ขีดเส้นใต้สีเหลืองพาสเทล */
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+h2 {
+    color: #6C5CE7;
+    margin: 1rem 0 0.5rem 0;
+}
+
+/* ปุ่มกดสไตล์น่ารักเรียบง่าย */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: #FF8B8B;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(255, 139, 139, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background-color: #FF7676;
+}
+
+/* ตารางและลิสต์ */
+.timeline-item, .activity-card {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #E0E0E0;
+}
+
+.timeline-item:last-child, .activity-card:last-child {
+    border-bottom: none;
+}
+
+/* Footer ส่วนท้าย */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #A0A0A0;
+    font-size: 0.9rem;
+}
